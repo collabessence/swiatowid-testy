@@ -1,0 +1,62 @@
+name: Błąd
+description: Coś działa źle, zawiesza się, wygląda nie tak, jak powinno.
+title: "[błąd] "
+labels: ["błąd"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Dzięki za zgłoszenie. Jeśli Twoja wersja ma klawisz **F8** (zgłoszenie z gry), naciśnij go zaraz po błędzie i przeciągnij paczkę z folderu, który się otworzy, do pola „Załączniki”. Nie wpisuj danych osobowych.
+  - type: input
+    id: wersja
+    attributes:
+      label: Wersja gry
+      description: Widać ją w menu głównym, np. 0.0.7.2.
+      placeholder: 0.0.7.2
+    validations:
+      required: true
+  - type: dropdown
+    id: system
+    attributes:
+      label: System
+      options: [Windows, Linux]
+    validations:
+      required: true
+  - type: dropdown
+    id: obszar
+    attributes:
+      label: Czego dotyczy
+      options: [Walka, Ruch i unik, Kamera, Sterowanie (pad lub klawiatura), HUD i menu, Ekwipunek i karta postaci, Wygląd (grafika), Wydajność (klatki, przycięcia), Dźwięk, Zawieszenie lub wyjście z gry, Inne]
+    validations:
+      required: true
+  - type: textarea
+    id: co
+    attributes:
+      label: Co się stało
+      description: Jednym, dwoma zdaniami.
+    validations:
+      required: true
+  - type: textarea
+    id: oczekiwane
+    attributes:
+      label: Co powinno się stać
+  - type: textarea
+    id: kroki
+    attributes:
+      label: Jak to powtórzyć
+      placeholder: |
+        1. Arena wojownika
+        2. Unik w tył tuż po ciosie
+        3. Postać staje w miejscu
+  - type: dropdown
+    id: czestosc
+    attributes:
+      label: Jak często
+      options: [Za każdym razem, Czasem, Raz]
+    validations:
+      required: true
+  - type: textarea
+    id: zalaczniki
+    attributes:
+      label: Załączniki
+      description: Paczka z F8, zrzut ekranu albo krótkie nagranie (przeciągnij tutaj).

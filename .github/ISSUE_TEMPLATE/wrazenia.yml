@@ -1,0 +1,43 @@
+name: Wrażenia po sesji
+description: Jak się grało — po każdej sesji grania, nawet krótkiej.
+title: "[wrażenia] "
+labels: ["wrażenia"]
+body:
+  - type: input
+    id: wersja
+    attributes:
+      label: Wersja gry
+      placeholder: 0.0.7.2
+    validations:
+      required: true
+  - type: dropdown
+    id: ocena
+    attributes:
+      label: Czy zagrasz jeszcze raz? (0 = nie, 10 = od razu)
+      options: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+    validations:
+      required: true
+  - type: input
+    id: czas
+    attributes:
+      label: Ile mniej więcej grałeś/aś (minuty)
+      placeholder: "30"
+  - type: dropdown
+    id: sterowanie
+    attributes:
+      label: Czym grałeś/aś
+      options: [Pad, Klawiatura i mysz]
+  - type: textarea
+    id: dobre
+    attributes:
+      label: Co było dobre
+  - type: textarea
+    id: frustrowalo
+    attributes:
+      label: Co frustrowało albo było niejasne
+    validations:
+      required: true
+  - type: textarea
+    id: inne
+    attributes:
+      label: Coś jeszcze
